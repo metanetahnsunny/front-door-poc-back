@@ -1,6 +1,6 @@
 {
   "name": "simple-node-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Node.js backend for React frontend integration testing",
   "main": "server.js",
   "scripts": {
