@@ -12,13 +12,7 @@ const FRONTEND_URL = process.env.FRONTEND_URL || 'https://orange-cliff-06585a403
 // Middleware
 app.use(helmet());
 app.use(cors({
-  origin: [
-    FRONTEND_URL,
-    'https://apim-metanet.azure-api.net',
-    'https://apim-metanet.developer.azure-api.net',
-    'http://localhost:3000', // for local development
-    'http://localhost:3001'
-  ],
+  origin: true, // Allow all origins temporarily for debugging
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Ocp-Apim-Subscription-Key']
