@@ -14,12 +14,14 @@ app.use(helmet());
 app.use(cors({
   origin: [
     FRONTEND_URL,
+    'https://apim-metanet.azure-api.net',
+    'https://apim-metanet.developer.azure-api.net',
     'http://localhost:3000', // for local development
     'http://localhost:3001'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'Ocp-Apim-Subscription-Key']
 }));
 
 app.use(express.json({ limit: '10mb' }));
